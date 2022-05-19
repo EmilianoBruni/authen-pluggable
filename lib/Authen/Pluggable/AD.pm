@@ -79,3 +79,7 @@ sub log ( $s, $type, $msg ) {
 }
 
 1;
+
+__END__
+
+# ABSTRACT: descrizione del modulo

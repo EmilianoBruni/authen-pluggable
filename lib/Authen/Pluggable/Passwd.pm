@@ -25,3 +25,7 @@ sub cfg ($s, $k=undef, $v=undef) {
 }
 
 1;
+
+__END__
+
+# ABSTRACT: descrizione del modulo
