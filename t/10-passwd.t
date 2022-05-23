@@ -6,15 +6,15 @@ use Mojo::File 'path';
 
 my $provider = 'Passwd';
 
-my $user = 'test';
-my $pass = 'test';
+my $user = 'foo';
+my $pass = 'foo';
 
 my $log  = $ENV{DEBUG} ? Mojo::Log->new( color => 1 ) : undef;
 my $auth = new Authen::Pluggable( log => $log );
 
 isa_ok(
-    $auth->providers($provider)->$provider->cfg(
-        'file' => path(__FILE__)->sibling('passwd')->to_string
+    $auth->provider($provider)->cfg(
+        'file' => path(__FILE__)->sibling('users1')->to_string
     ),
     'Authen::Pluggable'
 );

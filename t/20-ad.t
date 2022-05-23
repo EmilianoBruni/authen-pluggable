@@ -18,7 +18,7 @@ my $pass = delete $opt{'pass'};
 my $log  = $ENV{DEBUG} ? Mojo::Log->new( color => 1 ) : undef;
 my $auth = new Authen::Pluggable( log => $log );
 
-isa_ok( $auth->providers($provider)->$provider->cfg(%opt),
+isa_ok( $auth->provider($provider)->cfg(%opt),
     'Authen::Pluggable' );
 
 my $uinfo = $auth->authen( $user, $pass );

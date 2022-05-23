@@ -16,10 +16,12 @@ sub authen ( $s, $user, $pass ) {
     return { user => $user, cn => $cn, gid => $gid, uid => $uid };
 }
 
-sub cfg ($s, $k=undef, $v=undef) {
+sub cfg ($s, %cfg) {
 
-    if ($k) {
-        $s->_cfg->{$k} = $v;
+    if (%cfg) {
+        while (my ($k, $v) = each %cfg) {
+            $s->_cfg->{$k} = $v;
+        }
     }
     return $s->parent;
 }
