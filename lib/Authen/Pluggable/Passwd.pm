@@ -30,4 +30,4 @@ sub cfg ($s, %cfg) {
 
 __END__
 
-# ABSTRACT: descrizione del modulo
+# ABSTRACT: Authentication via a passwd file

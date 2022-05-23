@@ -82,4 +82,4 @@ sub log ( $s, $type, $msg ) {
 
 __END__
 
-# ABSTRACT: descrizione del modulo
+# ABSTRACT: Authentication via Active Directory
