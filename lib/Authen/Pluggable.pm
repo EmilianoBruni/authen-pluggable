@@ -41,8 +41,8 @@ sub _load_provider ( $s, $provider, %cfg ) {
     }
 }
 
-sub authen ( $s, $user, $pass ) {
-    foreach my $provider ( keys %{ $s->_providers } ) {
+sub authen ( $s, $user, $pass, $providers = [keys %{ $s->_providers }] ) {
+    foreach my $provider ( @$providers ) {
         my $uinfo = $s->_providers->{$provider}->authen( $user, $pass );
         $uinfo && do {
             $uinfo->{provider} = $provider;
