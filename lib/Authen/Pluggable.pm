@@ -150,9 +150,10 @@ different password files
 
 It always return the object itself.
 
-=head2 authen($username, $password)
+=head2 authen($username, $password, [opt] $providers)
 
-Call all configured providers and return the first with a valid authentication.
+Call all configured providers, or only $providers if configured, and return 
+the first with a valid authentication.
 
 The structure returned is usually something like this
 
